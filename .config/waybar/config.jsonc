@@ -1,0 +1,62 @@
+{
+    "layer": "top",
+    "position": "bottom", // Según tu imagen, está abajo
+    "height": 24,
+    "spacing": 0, // Elimina el espacio entre módulos
+
+    "modules-left": [
+        "hyprland/workspaces",
+        "mpris",
+    ],
+    "modules-center": [],
+    "modules-right": [
+        "network",
+        "memory",
+        "pulseaudio",
+        "battery",
+        "clock"
+    ],
+
+    // Left
+    "hyprland/workspaces": {
+        "format": " {name}",
+        "on-click": "activate"
+    },
+
+    "mpris": {
+        "format": " | {title} - {artist} - {album}",
+        "max-length": 70,
+        //"player": "spotify" // Opcional: especificar reproductor
+    },
+
+    // Right
+    "network": {
+        "format-wifi": "Garbage: 7573::656C:6573:73/64 | IPv4: 192.168.255.255 | {essid} | ",
+        "format-ethernet": "{ifname} | ",
+        "format-disconnected": "Desconectado | "
+    },
+
+    "memory": {
+        "format": "Nvidia, Fuck You!: {percentage}% | "
+    },
+
+    "pulseaudio": {
+        "format": "Me escuchan?: {volume}% | ",
+        "format-muted": "Nadie me escucha   | "
+    },
+
+    "battery": {
+        "states": {
+            "good": 80,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "Bolivia: 0.{capacity} | ",
+        "format-charging": "GluGluGlu: 0.{capacity} | "
+    },
+
+    "clock": {
+        "format": "{:%d/%m/%y %H:%M:%S} ",
+        "interval": 1
+    }
+}
