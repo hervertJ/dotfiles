@@ -1,8 +1,8 @@
 {
     "layer": "top",
-    "position": "bottom", // Según tu imagen, está abajo
+    "position": "top",
     "height": 24,
-    "spacing": 0, // Elimina el espacio entre módulos
+    "spacing": 0,
 
     "modules-left": [
         "hyprland/workspaces",

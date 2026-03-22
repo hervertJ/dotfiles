@@ -1,8 +1,4 @@
-/* Reset total de estilos */
-
-@define-color barColorLight #181616; /* Gris oscuro como tu Hyprland */
-@define-color barColorDark #000000;
-@define-color color-font #ffffff;
+@import "/home/hervert/.config/colorschemes/gruvbox-material-dark-hard/waybar/style.css";
 
 * {
     border: none;
@@ -13,9 +9,9 @@
 }
 
 window#waybar {
-background-color: @barColorDark;
-    color: @color-font;
-    transition-property: background-color;
+    background-color: @background;
+    color: @foreground;
+    transition-property: background;
     transition-duration: .5s;
 }
 
@@ -49,8 +45,4 @@ background-color: @barColorDark;
 /* Colores críticos para batería o memoria (opcional) */
 #battery.critical:not(.charging) {
     color: #f38ba8;
-}
-
-#memory {
-    color: #ffffff;
 }
