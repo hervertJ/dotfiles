@@ -266,6 +266,7 @@ plugins {
 load_plugins {
 }
 web_client {
+    //font "IosevkaTerm Nerd Font Propo"
     font "monospace"
 }
  

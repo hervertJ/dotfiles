@@ -1,62 +1,126 @@
 {
-    "layer": "top",
-    "position": "top",
-    "height": 24,
-    "spacing": 0,
+  "position": "top",
+  "margin-top": 15,
+  "modules-left": ["clock", "mpris"],
+  "modules-center": ["custom/notification", "hyprland/workspaces"],
+  "modules-right": ["pulseaudio", "network", "memory", "battery"],
 
-    "modules-left": [
-        "hyprland/workspaces",
-        "mpris",
-    ],
-    "modules-center": [],
-    "modules-right": [
-        "network",
-        "memory",
-        "pulseaudio",
-        "battery",
-        "clock"
-    ],
+  "clock": {
+    "interval": 60,
+    "format": "{:%H:%M}",
+    "max-length": 25
+  },
 
-    // Left
-    "hyprland/workspaces": {
-        "format": " {name}",
-        "on-click": "activate"
-    },
+  "mpris": {
+  	"format": "{title} <i>by</i> {artist}",
+  	"format-paused": "<i>{title} by {artist}</i>",
+    "max-length": 40,
+  	//"player-icons": {
+  	//	"default": "▶",
+  	//	"mpv": "🎵"
+  	//},
+  	//"status-icons": {
+  	//	"paused": "⏸"
+  	//},
+  	// "ignored-players": ["firefox"]
+  },
 
-    "mpris": {
-        "format": " | {title} - {artist} - {album}",
-        "max-length": 70,
-        //"player": "spotify" // Opcional: especificar reproductor
-    },
-
-    // Right
-    "network": {
-        "format-wifi": "Garbage: 7573::656C:6573:73/64 | IPv4: 192.168.255.255 | {essid} | ",
-        "format-ethernet": "{ifname} | ",
-        "format-disconnected": "Desconectado | "
-    },
-
-    "memory": {
-        "format": "Nvidia, Fuck You!: {percentage}% | "
-    },
-
-    "pulseaudio": {
-        "format": "Me escuchan?: {volume}% | ",
-        "format-muted": "Nadie me escucha   | "
-    },
-
-    "battery": {
-        "states": {
-            "good": 80,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "Bolivia: 0.{capacity} | ",
-        "format-charging": "GluGluGlu: 0.{capacity} | "
-    },
-
-    "clock": {
-        "format": "{:%d/%m/%y %H:%M:%S} ",
-        "interval": 1
+  "hyprland/workspaces": {
+  	"format": "{name}",
+  	"format-icons": {
+  	  "1": " ",
+  	  "2": " ",
+  	  "3": " ",
+  	  "4": " ",
+  	  "5": " ",
+  	  "active": " ",
+  	  "default": " "
+  	},
+    "persistent-workspaces": {
+      "*": 5, // 5 workspaces by default on every monitor
+      "HDMI-A-1": 4 // but only three on HDMI-A-1
     }
+  },
+
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10,
+    "icons": {
+      "blueman": "bluetooth",
+    }
+  },
+
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-bluetooth": "{volume}% {icon} ",
+    "format-muted": "",
+    "format-icons": {
+      "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
+      "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
+      "headphone": "",
+      //"hands-free": "",
+      //"headset": "",
+      "phone": "",
+      "phone-muted": "",
+      "portable": "",
+      "car": "",
+      "default": ["", ""]
+    },
+    "scroll-step": 1,
+    "on-click": "pavucontrol",
+    "ignored-sinks": ["Easy Effects Sink"]
+  },
+
+  "network": {
+    "interface": "wlp1s0",
+    "format": "{ifname}",
+    "format-wifi": "{essid} ",
+    "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+    "format-disconnected": "", //An empty format will hide the module.
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50
+  },
+
+  "battery": {
+    "bat": "BAT0",
+    "interval": 60,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-icons": ["", "", "", "", ""],
+    "max-length": 25,
+    "on-click": "sh ~/reset.sh",
+  },
+
+  "memory": {
+      "interval": 5,
+      "format": "{}% ",
+      "max-length": 10
+  },
+
+  "custom/notification": {
+    "tooltip": true,
+    "format": "<span size='16pt'>{icon}</span>",
+    "format-icons": {
+      "notification": "󱅫",
+      "none": "󰂜",
+      "dnd-notification": "󰂠",
+      "dnd-none": "󰪓",
+      "inhibited-notification": "󰂛",
+      "inhibited-none": "󰪑",
+      "dnd-inhibited-notification": "󰂛",
+      "dnd-inhibited-none": "󰪑"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
 }

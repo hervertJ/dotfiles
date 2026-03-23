@@ -3,7 +3,7 @@
     active-foreground: @foreground;
     normal-background: @background;
     normal-foreground: @foreground;
-    urgent-background: #fb4934;
+    urgent-background: #eb6f92;
     urgent-foreground: @foreground;
 
     alternate-active-background: @background;
@@ -21,12 +21,12 @@
     selected-urgent-foreground: @foreground;
 
     background-color: @background;
-    background: #ffffff;
-    foreground: #000000;
+    background: #232136;
+    foreground: #e0def4;
     border-color: @background;
     spacing: 2;
 
-    prompt-color: #b8bb26;
+    prompt-color: #eb6f92;
 }
 
 #window {

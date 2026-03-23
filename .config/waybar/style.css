@@ -1,48 +1,116 @@
-@import "/home/hervert/.config/colorschemes/gruvbox-material-dark-hard/waybar/style.css";
+@import "/home/hervert/.config/colorschemes/rose-pine-moon/waybar/style.css";
 
 * {
-    border: none;
-    border-radius: 0;
-    font-family: "IosevkaTerm Nerd Font";
-    font-size: 16px;
-    min-height: 35px;
+  border: none;
+  border-radius: 0px;
+
+  font-family: "IosevkaTerm Nerd Font Propo";
+  font-weight: bold;
+  font-size: 18px;
+
+  min-height: 0;
+  padding: 0;
+  margin: 0;
 }
 
 window#waybar {
-    background-color: @background;
-    color: @foreground;
-    transition-property: background;
-    transition-duration: .5s;
+  background: transparent;
 }
 
-/* Eliminar márgenes y paddings de todos los módulos */
-#workspaces,
-#window,
-#network,
-#memory,
-#pulseaudio,
-#battery,
-#clock {
-    margin: 0;
-    padding: 0;
+tooltip {
+  background: @color8;
+  border: 1px solid @background;
+  border-radius: 12px;
 }
 
-/* Estilo específico para los workspaces */
+tooltip label {
+  color: @foreground;
+  padding: 6px;
+}
+
+#workspaces {
+  background-color: @background;
+  padding: 5px 3px;
+  margin: 0 0 0 12px;
+  border-radius: 18px;
+  border: 0px solid @color8;
+  color: @foreground;
+}
+
 #workspaces button {
-    padding: 0 5px;
-    color: #ffffff;
-    background-color: transparent;
+  padding: 0px 6px;
+  margin: 0px 3px;
+  border-radius: 45px;
+  color: transparent;
+  background-color: @color8;
+  transition: all 0.3s ease-in-out;
+  min-width: 20px;
 }
 
 #workspaces button.active {
-    color: #285576; /* El cian que usas en el borde */
+  background-color: @color2;
+  color: @background;
+  min-width: 45px;
+  transition: all 0.3s ease-in-out;
+  font-size: 13px;
+}
+
+#workspaces button:hover {
+  background-color: @color4;
+  color: @background;
+  border-radius: 16px;
+  min-width: 45px;
+  background-size: 400% 400%;
 }
 
 #workspaces button.urgent {
-    color: #eb4d4b;
+  background-color: @color1;
+  color: @background;
+  border-radius: 16px;
+  min-width: 45px;
+  background-size: 400% 400%;
+  transition: all 0.3s ease-in-out;
 }
 
-/* Colores críticos para batería o memoria (opcional) */
-#battery.critical:not(.charging) {
-    color: #f38ba8;
+#clock,
+#mpris,
+#pulseaudio,
+#network,
+#battery,
+#memory,
+#custom-notification {
+  background-color: @background;
+  padding: 0 15px 0 15px;
+  margin: 0 0 0 12px;
+  border-radius: 45px;
+  border: 0px solid @color8;
+}
+
+#clock {
+  color: @color3;
+}
+
+#mpris {
+  color: @color7;
+}
+
+#pulseaudio {
+  color: @color4;
+}
+
+#network {
+  color: @color5;
+}
+
+#battery {
+  color: @color6;
+  margin: 0 12px 0 12px;
+}
+
+#memory {
+  color: @color9;
+}
+
+#custom-notification {
+  color: @foreground;
 }
