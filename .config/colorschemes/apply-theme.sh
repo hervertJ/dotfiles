@@ -22,9 +22,9 @@ else
 fi
 
 # Wallpaper
-swww img ~/Pictures/Wallpapers/"$WALLPAPER" --transition-type center --transition-fps 60 --transition-step 255
+awww img ~/Pictures/Wallpapers/"$WALLPAPER" --transition-type center --transition-fps 60 --transition-step 255
 
-notify-send "Aplicando tema: $selection"
+notify-send "Aplicando tema": "$selection"
 
 # Kitty
 kitten themes --reload-in=all "$KITTY_NAME"

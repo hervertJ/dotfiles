@@ -13,7 +13,11 @@ if status is-interactive
     alias la='eza -lbhHigUmuSa --time-style=long-iso --git --icons'
     alias lt='eza --tree --icons'
 
-    abbr -a zellij-python 'zellij --layout ~/.config/zellij/layouts/python.kdl'
+    # zellij
+    abbr -a zellij-uni 'zellij --layout ~/.config/zellij/layouts/uni.kdl'
+
+    # GNS3 (launch GNS3 with X11)
+    # abbr -a gns3 "env QT_QPA_PLATFORM=xcb gns3"
 end
 
 set -g fish_greeting

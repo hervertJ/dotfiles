@@ -12,7 +12,7 @@
   },
 
   "mpris": {
-  	"format": "{title} <i>by</i> {artist}",
+  	"format": "{title} <i>by</i> {artist} <i>from</i> {album}",
   	"format-paused": "<i>{title} by {artist}</i>",
     "max-length": 40,
   	//"player-icons": {
@@ -86,8 +86,9 @@
 
   "battery": {
     "bat": "BAT0",
-    "interval": 5,
+    "interval": 60,
     "states": {
+      "good": 80,
       "warning": 30,
       "critical": 15
     },
@@ -99,7 +100,8 @@
   "memory": {
       "interval": 5,
       "format": "{}% ",
-      "max-length": 10
+      "max-length": 10,
+      "on-click": "kitty btop"
   },
 
   "custom/notification": {
