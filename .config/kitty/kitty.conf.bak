@@ -11,6 +11,7 @@ cursor_shape block
 remember_window_size no
 inital_window_width 78c
 inital_window_height 23c
+#window_padding_width 28
 window_padding_width 40
 cursor_blink_interval 0
 

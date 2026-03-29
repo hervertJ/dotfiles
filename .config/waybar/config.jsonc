@@ -2,13 +2,19 @@
   "position": "top",
   "margin-top": 15,
   "modules-left": ["clock", "mpris"],
-  "modules-center": ["custom/notification", "hyprland/workspaces"],
+  "modules-center": ["custom/notification", "hyprland/workspaces", "cpu"],
   "modules-right": ["pulseaudio", "network", "memory", "battery"],
 
   "clock": {
     "interval": 60,
     "format": "{:%H:%M}",
     "max-length": 25
+  },
+
+  "cpu": {
+      "interval": 5,
+      "format": "{usage}% ",
+      "max-length": 10
   },
 
   "mpris": {
@@ -52,7 +58,8 @@
 
   "pulseaudio": {
     "format": "{volume}% {icon}",
-    "format-bluetooth": "{volume}% {icon} ",
+    //"format-bluetooth": "{volume}% {icon} ",
+    "format-bluetooth": "{volume}% ",
     "format-muted": "",
     "format-icons": {
       "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
@@ -101,7 +108,7 @@
       "interval": 5,
       "format": "{}% ",
       "max-length": 10,
-      "on-click": "kitty btop"
+      "on-click": "kitty htop"
   },
 
   "custom/notification": {

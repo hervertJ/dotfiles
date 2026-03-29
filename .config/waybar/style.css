@@ -1,4 +1,4 @@
-@import "/home/hervert/.config/colorschemes/flat/waybar/style.css";
+@import "/home/hervert/.config/colorschemes/themes/rose-pine-moon/waybar/style.css";
 
 * {
   border: none;
@@ -74,6 +74,7 @@ tooltip label {
 
 #clock,
 #mpris,
+#cpu,
 #pulseaudio,
 #network,
 #battery,
@@ -91,7 +92,15 @@ tooltip label {
 }
 
 #mpris {
-  color: @color7;
+  color: @foreground;
+}
+
+#custom-notification {
+  color: @foreground;
+}
+
+#cpu {
+  color: @foreground;
 }
 
 #pulseaudio {
@@ -102,15 +111,11 @@ tooltip label {
   color: @color5;
 }
 
-#battery {
-  color: @color6;
-  margin: 0 12px 0 12px;
-}
-
 #memory {
-  color: @color9;
+  color: @color6;
 }
 
-#custom-notification {
-  color: @foreground;
+#battery {
+  color: @color9;
+  margin: 0 12px 0 12px;
 }

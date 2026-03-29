@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Rutas
-BASE_DIR="$HOME/.config/colorschemes"
+BASE_DIR="$HOME/.config/colorschemes/themes"
 NVIM_FILE="$HOME/.config/nvim/lua/plugins/colorscheme.lua"
 WAYBAR_STYLE="$HOME/.config/waybar/style.css"
 ROFI_THEME="$HOME/.config/rofi/launcher.rasi"
 
-selection=$(find "$BASE_DIR" -maxdepth 1 -type d -not -path "$BASE_DIR" -exec basename {} \; | rofi -dmenu -theme $HOME/.config/rofi/launcher.rasi -p "Colorscheme:")
+selection=$(find "$BASE_DIR" -maxdepth 1 -type d -not -path "$BASE_DIR" -exec basename {} \; | rofi -dmenu -theme $HOME/.config/rofi/launcher-theme.rasi -p "Colorscheme:")
 
 [[ -z "$selection" ]] && exit 0
 

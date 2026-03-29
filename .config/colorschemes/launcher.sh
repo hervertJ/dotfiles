@@ -6,23 +6,23 @@ opciones=" Theme\n Wallpapers\n Modes\n Utilities\n Fonts"
 seleccion=$(echo -e "$opciones" | rofi -dmenu -theme $HOME/.config/rofi/launcher.rasi -p "Appareance")
 
 case "$seleccion" in
-    " Theme")
-        ~/.config/colorschemes/apply-theme.sh
-        ;;
-    " Wallpapers")
-        #~/.config/colorschemes/wallpapers.sh
-        ~/.config/colorschemes/wallpapers-theme.sh
-        ;;
-    " Modes")
-        notify-send "pruebas modes"
-        ;;
-    " Utilities")
-        ~/.config/colorschemes/utilities.sh
-        ;;
-    " Fonts")
-        ~/uni.sh
-        ;;
-    *)
-        exit 1
-        ;;
+  " Theme")
+    ~/.config/colorschemes/scripts/theme.sh
+    ;;
+  " Wallpapers")
+    #~/.config/colorschemes/wallpapers.sh
+    ~/.config/colorschemes/scripts/wallpapers-theme.sh
+    ;;
+  " Modes")
+    ~/.config/colorschemes/scripts/uni.sh
+    ;;
+  " Utilities")
+    ~/.config/colorschemes/scripts/utilities.sh
+    ;;
+  " Fonts")
+    notify-send "hola"
+    ;;
+  *)
+    exit 1
+    ;;
 esac
