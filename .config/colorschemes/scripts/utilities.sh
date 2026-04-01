@@ -6,7 +6,7 @@ seleccion=$(echo -e "$opciones" | rofi -dmenu -theme $HOME/.config/rofi/launcher
 
 case "$seleccion" in
   " Battery")
-    ~/.config/colorschemes/conservation-battery.sh
+    sh ~/.config/colorschemes/scripts/conservation-battery.sh
     ;;
   " Depuración")
     notify-send depuración

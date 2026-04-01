@@ -1,11 +1,17 @@
 #!/bin/bash
-FILE="/sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode"
-CURRENT=$(cat $FILE)
+FILE="/sys/class/power_supply/BAT0/charge_types"
 
-if [ "$CURRENT" -eq "0" ]; then
-    echo 1 | sudo tee $FILE
-    notify-send "Battery" "Modo Conservación Activado (Stand-by)"
+if [ ! -f "$FILE" ]; then
+    notify-send "Error" "No se encuentra el control de batería."
+    exit 1
+fi
+
+CURRENT=$(cat "$FILE" | grep -o "\[.*\]")
+
+if [ "$CURRENT" == "[Long_Life]" ]; then
+    echo "Standard" | sudo tee "$FILE"
+    notify-send "Batería" "Modo Conservación Desactivado (Carga Standard)"
 else
-    echo 0 | sudo tee $FILE
-    notify-send "Battery" "Modo Conservación Desactivado (Cargando)"
+    echo "Long_Life" | sudo tee "$FILE"
+    notify-send "Batería" "Modo Conservación Activado (Long Life)"
 fi

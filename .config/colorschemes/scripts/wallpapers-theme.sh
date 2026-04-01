@@ -5,7 +5,7 @@ ACTUAL_THEME="${NAME:1}"
 echo "$ACTUAL_THEME"
 
 # Rutas
-DIR_WALL="$HOME/.config/colorschemes/themes/$ACTUAL_THEME/wallpapers/"
+DIR_WALL="$HOME/.config/colorschemes/themes/$ACTUAL_THEME/wallpapers"
 
 echo "$DIR_WALL"
 
@@ -22,3 +22,5 @@ if [ -z "$SELECTED" ]; then
 fi
 
 awww img "$DIR_WALL/$SELECTED" --transition-type center --transition-fps 60 --transition-step 255
+
+ln -sf "$DIR_WALL/$SELECTED" ~/.config/colorschemes/.current-wallpaper
