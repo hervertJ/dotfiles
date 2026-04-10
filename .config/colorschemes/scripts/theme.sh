@@ -23,6 +23,7 @@ fi
 
 # Wallpaper
 awww img ~/Pictures/Wallpapers/"$WALLPAPER" --transition-type center --transition-fps 60 --transition-step 255
+#ln -sf "$HOME/Pictures/Wallpapers/$WALLPAPER" ~/.config/colorschemes/.current-wallpaper
 
 notify-send "Aplicando tema": "$selection"
 

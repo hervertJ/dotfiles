@@ -8,8 +8,8 @@ if status is-interactive
     alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
     # eza
-    alias ls='eza --icons --group-directories-first'
-      #alias ll='eza -lbF --git --icons'
+    alias ls='eza -1 --icons --group-directories-first'
+    #alias ll='eza -lbF --git --icons'
     alias ll='eza -lbF --git'
     alias la='eza -lbhHigUmuSa --time-style=long-iso --git --icons'
     alias lt='eza --tree --icons'
@@ -17,8 +17,10 @@ if status is-interactive
     # zellij
     abbr -a zellij-uni 'zellij --layout ~/.config/zellij/layouts/uni.kdl'
 
-    # GNS3 (launch GNS3 with X11)
-    # abbr -a gns3 "env QT_QPA_PLATFORM=xcb gns3"
+    # git
+    abbr -a gitc 'git commit -m'
+    abbr -a lgit 'lazygit'
+
 end
 
 set -g fish_greeting

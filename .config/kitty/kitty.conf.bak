@@ -1,4 +1,4 @@
-font_family IosevkaTerm Nerd Font
+font_family IosevkaTerm Nerd Font Mono
 font_size 18
 
 disable_ligatures no
@@ -26,6 +26,6 @@ sync_to_monitor no
 cursor_trail 1
 
 # BEGIN_KITTY_THEME
-# Base16-Gruvbox-Dark-Hard
+# Rose-Pine-Moon
 include current-theme.conf
 # END_KITTY_THEME
