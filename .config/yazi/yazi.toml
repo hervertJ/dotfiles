@@ -1,0 +1,14 @@
+[opener]
+image = [
+        { run = "zen-browser %s", orphan = true }
+]
+pdff = [
+      #{ run = 'zathura "$@"', desc = "zathura", block = true, for = "unix" },
+       { run = 'zen-browser %s', desc = "zathura", block = true, for = "unix" },
+]
+
+[open]
+rules = [
+        { mime = "image/*", use = "image" },
+        { mime = "application/pdf", use = [ "pdff", "reveal" ] },
+]

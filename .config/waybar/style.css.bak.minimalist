@@ -1,0 +1,48 @@
+@import "/home/hervert/.config/colorschemes/rose-pine-moon/waybar/style.css";
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "IosevkaTerm Nerd Font";
+    font-size: 16px;
+    min-height: 35px;
+}
+
+window#waybar {
+    background-color: @background;
+    color: @foreground;
+    transition-property: background;
+    transition-duration: .5s;
+}
+
+/* Eliminar márgenes y paddings de todos los módulos */
+#workspaces,
+#window,
+#network,
+#memory,
+#pulseaudio,
+#battery,
+#clock {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo específico para los workspaces */
+#workspaces button {
+    padding: 0 5px;
+    color: #ffffff;
+    background-color: transparent;
+}
+
+#workspaces button.active {
+    color: #285576; /* El cian que usas en el borde */
+}
+
+#workspaces button.urgent {
+    color: #eb4d4b;
+}
+
+/* Colores críticos para batería o memoria (opcional) */
+#battery.critical:not(.charging) {
+    color: #f38ba8;
+}

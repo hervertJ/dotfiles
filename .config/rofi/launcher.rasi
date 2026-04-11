@@ -1,0 +1,108 @@
+configuration {
+	font: "IosevkaTerm Nerd Font Propo Bold 16";
+	//font: "JetBrainsMono Nerd Font Propo 14";
+  disable-history: false;
+  fullscreen: false;
+	hide-scrollbar: true;
+	sidebar-mode: false;
+}
+
+@import "current-colors-rofi.rasi"
+
+/* === Ventana principal === */
+window {
+    width: 30%;
+    border: 2px;
+    border-color: @border-color;
+    border-radius: 16px;
+    background-color: @background;
+    padding: 16px;
+}
+
+/* === Caja general === */
+mainbox {
+    spacing: 12px;
+}
+
+/* === Barra de búsqueda === */
+inputbar {
+    background-color: transparent;
+    border: 1px;
+    border-color: @urgent-background;
+    border-radius: 10px;
+    padding: 15px;
+    spacing: 0px;
+}
+
+prompt {
+    text-color: @prompt-color;
+}
+
+textbox-prompt-colon {
+    enabled:                     true;
+    expand:                      false;
+    str:                         "";
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+
+entry {
+    placeholder: "Search...";
+    text-color: @foreground;
+	  font: "IosevkaTerm Nerd Font Propo 16";
+}
+
+/* === Lista === */
+listview {
+    lines: 5;
+    columns: 1;
+    spacing: 6;
+    scrollbar: false;
+}
+
+/* === Elementos === */
+element {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+element normal.normal {
+    background-color: @normal-background;
+    text-color: @normal-foreground;
+}
+
+element selected.normal {
+    background-color: @selected-normal-background;
+    //text-color: @selected-normal-foreground;
+    text-color: @prompt-color;
+}
+
+element active {
+    background-color: @active-background;
+    text-color: @active-foreground;
+}
+
+element urgent {
+    background-color: @urgent-background;
+    text-color: @urgent-foreground;
+}
+
+/* === Texto del elemento === */
+element-text {
+    text-color: inherit;
+    vertical-align: 0.5;
+    margin: 0 0 0 8;
+}
+
+/* === Iconos (para parecerse más a tu UI) === */
+//element-icon {
+//    size: 20px;
+//}
+
+/* === Scroll (oculto pero definido) === */
+scrollbar {
+    width: 4px;
+    handle-color: @foreground;
+    border-radius: 10px;
+}

@@ -8,7 +8,7 @@ if status is-interactive
     alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
     # eza
-    alias ls='eza -1 --icons --group-directories-first'
+    # alias ls='eza -1 --icons --group-directories-first'
     #alias ll='eza -lbF --git --icons'
     alias ll='eza -lbF --git'
     alias la='eza -lbhHigUmuSa --time-style=long-iso --git --icons'

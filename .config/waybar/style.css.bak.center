@@ -1,0 +1,120 @@
+@import "/home/hervert/.config/colorschemes/black-metal-gorgoroth/waybar/style.css";
+
+* {
+  border: none;
+  border-radius: 0px;
+
+  font-family: "IosevkaTerm Nerd Font Propo";
+  font-weight: bold;
+  font-size: 18px;
+
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+tooltip {
+  background: @color8;
+  border: 1px solid @background;
+  border-radius: 12px;
+}
+
+.modules-center {
+  background-color: @background;
+  border-radius: 45px;
+  border: 0px solid @color8;
+}
+
+tooltip label {
+  color: @foreground;
+  padding: 6px;
+}
+
+
+#workspaces {
+  background-color: @background;
+  padding: 5px 3px;
+  margin: 0 0 0 12px;
+  border-radius: 18px;
+  border: 0px solid @color8;
+  color: @foreground;
+}
+
+#workspaces button {
+  padding: 0px 6px;
+  margin: 0px 3px;
+  border-radius: 45px;
+  color: transparent;
+  background-color: @color8;
+  transition: all 0.3s ease-in-out;
+  min-width: 20px;
+}
+
+#workspaces button.active {
+  background-color: @color2;
+  color: @background;
+  min-width: 45px;
+  transition: all 0.3s ease-in-out;
+  font-size: 13px;
+}
+
+#workspaces button:hover {
+  background-color: @color4;
+  color: @background;
+  border-radius: 16px;
+  min-width: 45px;
+  background-size: 400% 400%;
+}
+
+#workspaces button.urgent {
+  background-color: @color1;
+  color: @background;
+  border-radius: 16px;
+  min-width: 45px;
+  background-size: 400% 400%;
+  transition: all 0.3s ease-in-out;
+}
+
+#clock,
+#mpris,
+#cpu,
+#pulseaudio,
+#network,
+#battery,
+#memory,
+#custom-notification {
+  background-color: @background;
+  padding: 0 6px 0 6px;
+  margin: 0 0 0 12px;
+  border-radius: 45px;
+  border: 0px solid @color8;
+}
+
+#clock {
+  color: @color3;
+}
+
+#pulseaudio {
+  color: @color4;
+}
+
+#network {
+  color: @color5;
+}
+
+#memory {
+  color: @color6;
+}
+
+#cpu {
+  color: @color9;
+}
+
+#battery {
+  color: @color10;
+  margin: 0 12px 0 12px;
+}
