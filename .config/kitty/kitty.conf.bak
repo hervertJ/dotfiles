@@ -21,6 +21,8 @@ scrollbar_track_opacity 0
 scrollbar_track_hover_opacity 0
 confirm_os_window_close 0
 
+#repaint_delay 8
+#input_delay 0
 sync_to_monitor no
 
 cursor_trail 1

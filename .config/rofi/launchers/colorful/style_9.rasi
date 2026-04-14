@@ -10,7 +10,7 @@
 //@theme "/dev/null"
 
 configuration {
-	font:							"Iosevka Nerd Font 16";
+	font:							"IosevkaTerm Nerd Font 16";
     show-icons:                     true;
 	icon-theme: 					"Papirus";
     display-drun: 					"Applications";
@@ -43,7 +43,7 @@ prompt {
 	background-color: 				@ac;
 	text-color: 					@fg;
     border-radius:                  10px;
-	font:							"Iosevka Nerd Font 12";
+	font:							"IosevkaTerm Nerd Font Bold 14";
 }
 
 textbox-prompt-colon {
@@ -66,24 +66,24 @@ entry {
 }
 
 inputbar {
-	children: 						[ prompt, entry ];
-    background-color:               @se;
-    text-color:                     @fg;
-    expand:                         false;
-	border:							0% 0% 0% 0%;
-    border-radius:                  10px;
-	border-color:					@ac;
+	children:                        [ prompt, entry ];
+  background-color:                @se;
+  text-color:                      @fg;
+  expand:                          false;
+	border:                          0% 0% 0% 0%;
+  border-radius:                   10px;
+	border-color:                    @ac;
 }
 
 listview {
-    background-color:               @al;
-    padding:                        0px;
-    columns:                        2;
-    lines:                          7;
-    spacing:                       	1%;
-    cycle:                          false;
-    dynamic:                        true;
-    layout:                         vertical;
+  background-color:                @al;
+  padding:                         0px;
+  columns:                         1;
+  lines:                           6;
+  spacing:                         1%;
+  cycle:                           false;
+  dynamic:                         true;
+  layout:                          vertical;
 }
 
 mainbox {
