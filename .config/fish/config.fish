@@ -5,7 +5,7 @@ if status is-interactive
     atuin init fish | source
 
     # dotfiles
-    alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME" funcsave config
+    alias dots="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
     # eza
     alias ls='eza -1 --icons --group-directories-first'

@@ -23,11 +23,11 @@ confirm_os_window_close 0
 
 #repaint_delay 8
 #input_delay 0
-sync_to_monitor no
+sync_to_monitor yes
 
 cursor_trail 1
 
 # BEGIN_KITTY_THEME
-# Rose-Pine-Moon
+# Base16-Catppuccin
 include current-theme.conf
 # END_KITTY_THEME
