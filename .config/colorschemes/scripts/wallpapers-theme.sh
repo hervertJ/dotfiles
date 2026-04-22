@@ -16,11 +16,10 @@ SELECTED=$(find "$DIR_WALL" -maxdepth 1 -type f \( -iname "*.jpg" -o -iname "*.j
     echo -en "$filename\0icon\x1fthumbnail://$path\n"
 done | rofi -dmenu -i -p "Seleccionar Wallpaper:" -show-icons -config ~/.config/rofi/launcher.rasi)
 
-# 3. Si el usuario cancela (ESC), salir
 if [ -z "$SELECTED" ]; then
     exit 0
 fi
 
 awww img "$DIR_WALL/$SELECTED" --transition-type center --transition-fps 60 --transition-step 255
 
-ln -sf "$DIR_WALL/$SELECTED" ~/.config/colorschemes/.current-wallpaper
+ln -sfn "themes/$ACTUAL_THEME/wallpapers/$SELECTED" ~/.config/colorschemes/.current-wallpaper

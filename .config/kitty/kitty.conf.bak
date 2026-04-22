@@ -28,6 +28,6 @@ sync_to_monitor yes
 cursor_trail 1
 
 # BEGIN_KITTY_THEME
-# Rose-Pine-Moon
+# Base16-Black-Metal-Gorgoroth
 include current-theme.conf
 # END_KITTY_THEME
