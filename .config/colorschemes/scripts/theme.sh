@@ -34,9 +34,9 @@ kitten themes --reload-in=all "$KITTY_NAME"
 sed -i "s/^colorscheme = .*/colorscheme = \"$NVIM_NAME\",/" "$NVIM_FILE"
 
 # Waybar
-ln -sf "$BASE_DIR/$selection/waybar/style.css" ~/.config/waybar/current-color-waybar.css
+ln -sfn "../colorschemes/themes/$selection/waybar/style.css" ~/.config/waybar/current-color-waybar.css
 
 # Rofi
-ln -sf "$BASE_DIR/$selection/rofi/colors.rasi" ~/.config/rofi/current-colors-rofi.rasi
+ln -sfn "../colorschemes/themes/$selection/rofi/colors.rasi" ~/.config/rofi/current-colors-rofi.rasi
 
 pkill waybar && waybar & disown

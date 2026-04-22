@@ -258,6 +258,52 @@ plugins {
     welcome-screen location="zellij:session-manager" {
         welcome_screen true
     }
+
+    //########## Extra ##########//
+    zjstatus location="file:~/.config/zellij/plugins/zjstatus.wasm" {
+        hide_frame_for_single_pane "false"
+
+        format_left  "{mode}#[fg=,bg=,bold] {tabs}"
+        format_center "#[fg=,bg=]{datetime}"
+        format_right "#[fg=,bg=]{command_memo}  #[fg=,bg=]{command_bat}"
+        format_space "#[bg=]"
+
+        mode_normal          "#[fg=#89B4FA]NORMAL"
+        //mode_tmux            "#[fg=#ffc387]TMUX"
+        mode_locked          "#[fg=#6e738d]LOCKED"
+        mode_resize          "#[fg=#f38ba8]RESIZE"
+        mode_pane            "#[fg=#89b4fa]PANE"
+        mode_tab             "#[fg=#b4befe]TAB"
+        mode_scroll          "#[fg=#f9e2af]SCROLL"
+        mode_enter_search    "#[fg=#8aadf4]ENT-SEARCH"
+        mode_search          "#[fg=#8aadf4]SEARCHARCH"
+        mode_rename_tab      "#[fg=#b4befe]RENAME-TAB"
+        mode_rename_pane     "#[fg=#89b4fa]RENAME-PANE"
+        mode_session         "#[fg=#74c7ec]SESSION"
+        mode_move            "#[fg=#f5c2e7]MOVE"
+        mode_prompt          "#[fg=#8aadf4]PROMPT"
+        mode_default_to_mode "tmux"
+
+        tab_normal               "#[fg=#6C7086,bg=] {index} {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}"
+        tab_active               "#[fg=#9399B2,bg=,bold,italic] {index} {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}"
+        tab_fullscreen_indicator " "
+        tab_sync_indicator       "  "
+        tab_floating_indicator   "󰉈 "
+
+        command_memo_command    "bash -c ~/.config/zellij/scripts/memory-use.sh"
+        command_memo_format     "#[fg=#9399B2]{stdout}#[fg=#9399B2] "
+        command_memo_interval   "5"
+        command_memo_rendermode "static"
+
+        command_bat_command    "bash -c ~/.config/zellij/scripts/battery.sh"
+        command_bat_format     "#[fg=#9399B2]{stdout}#[fg=#9399B2] "
+        command_bat_interval   "5"
+        command_bat_rendermode "static"
+
+        datetime          "#[fg=#9399B2,bg=] {format} "
+        datetime_format   "%d %b %Y %H:%M"
+        datetime_timezone "America/Lima"
+    }
 }
 
 // Plugins to load in the background when a new session starts
@@ -265,6 +311,7 @@ plugins {
 // eg. "https://example.com/my-plugin.wasm"
 load_plugins {
 }
+
 web_client {
     //font "IosevkaTerm Nerd Font Propo"
     font "monospace"
@@ -286,7 +333,7 @@ theme "ansi"
 // Default: normal
 // 
 default_mode "locked"
- 
+
 // Choose the path to the default shell that zellij will use for opening new panes
 // Default: $SHELL
 // 
@@ -299,8 +346,8 @@ default_mode "locked"
 // The name of the default layout to load on startup
 // Default: "default"
 // 
-// default_layout "compact"
- 
+default_layout "uni"
+
 // The folder in which Zellij will look for layouts
 // (Requires restart)
 // 
