@@ -1,0 +1,110 @@
+configuration {
+	  font:                        "IosevkaTerm Nerd Font Propo Bold 16";
+	  //font: "JetBrainsMono Nerd Font Propo 14";
+    disable-history:             false;
+    fullscreen:                  false;
+	  hide-scrollbar:              true;
+	  sidebar-mode:                false;
+}
+
+@import ".current-colors-rofi.rasi"
+
+//----- Ventana principal ----- //
+window {
+    width:                       1440px;
+    border:                      2px;
+    border-color:                @background;
+    border-radius:               16px;
+    background-color:            @background;
+    padding:                     16px;
+}
+
+//----- Caja general ----- //
+mainbox {
+    spacing:                     12px;
+    children:   [ listview, inputbar ];
+}
+
+
+
+
+
+//----- Prompt -----//
+textbox-prompt-colon {
+    enabled:                     true;
+    expand:                      false;
+    str:                         "";
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+
+//----- Texto de búsqueda -----//
+entry {
+    placeholder:                 "Search Wallpaper...";
+    text-color:                  @foreground;
+	  font:                        "IosevkaTerm Nerd Font Propo 14";
+    horizontal-align:            0.5;
+    vertical-align: 0.5;
+}
+
+//----- Barra de búsqueda -----//
+inputbar {
+    children: [prompt,textbox-prompt-colon,entry,case-indicator];
+    background-color:            transparent;
+    border:                      1px;
+    border-color:                @color2;
+    border-radius:               10px;
+    padding:                     15px;
+    spacing:                     0px;
+}
+
+
+
+
+
+
+
+// ----- Lista -----//
+listview {
+    fixed-height: 0;
+    border: 2px 0px 0px;
+    border-color: @background;
+    spacing: 2px;
+    scrollbar: true;
+    padding: 2px 0px 0px;
+
+    lines:                       2;
+    columns:                     6;
+    spacing:                     6;
+    scrollbar:                   false;
+}
+
+//----- Elementos -----//
+element {
+    orientation:                 vertical;
+    spacing:                     10px;
+    padding:                     10px;
+    border-radius:               10px;
+    background-color:            transparent;
+}
+
+//----- Texto del elemento -----//
+element-text {
+    enabled:                     true;
+    horizontal-align:            0.5;
+    vertical-align:              0.5;
+    text-color:                  inherit;
+    //margin: 0 0 0 8;
+}
+
+/* === Iconos === */
+element-icon {
+    size:                        255px;
+    horizontal-align:            0.5;
+    cursor:                      inherit;
+}
+
+element selected.normal {
+    background-color: @color8;
+    text-color: @color2;
+}

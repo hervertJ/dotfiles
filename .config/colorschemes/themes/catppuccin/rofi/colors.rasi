@@ -1,168 +1,33 @@
 * {
-    active-background: #575268;
-    active-foreground: @foreground;
-    normal-background: @background;
-    normal-foreground: @foreground;
-    urgent-background: #F8BD96;
-    urgent-foreground: @foreground;
+background: #1E1E28;
+foreground: #D7DAE0;
+selection-background: #D7DAE0;
+selection-foreground: #1E1E28;
+url-color: #6E6C7C;
+cursor: #D7DAE0;
+active-border-color: #575268;
+inactive-border-color: #1A1826;
+active-tab-background: #1E1E28;
+active-tab-foreground: #D7DAE0;
+inactive-tab-background: #1A1826;
+inactive-tab-foreground: #6E6C7C;
+tab-bar-background: #1A1826;
+color0: #1E1E28;
+color1: #F28FAD;
+color2: #ABE9B3;
+color3: #FAE3B0;
+color4: #96CDFB;
+color5: #DDB6F2;
+color6: #B5E8E0;
+color7: #D7DAE0;
+color8: #575268;
+color9: #F8BD96;
+color10: #1A1826;
+color11: #302D41;
+color12: #6E6C7C;
+color13: #F5E0DC;
+color14: #F2CDCD;
+color15: #C9CBFF;
 
-    alternate-active-background: @background;
-    alternate-active-foreground: @foreground;
-    alternate-normal-background: @background;
-    alternate-normal-foreground: @foreground;
-    alternate-urgent-background: @background;
-    alternate-urgent-foreground: @foreground;
-
-    selected-active-background: @foreground;
-    selected-active-foreground: #B5E8E0;
-    selected-normal-background: #575268;
-    selected-normal-foreground: @foreground;
-    selected-urgent-background: #F8BD96;
-    selected-urgent-foreground: @foreground;
-
-    background-color: @background;
-    background: #1E1E28;
-    foreground: #D7DAE0;
-    border-color: @background;
-    spacing: 2;
-
-    prompt-color: #B5E8E0;
-}
-
-#window {
-    background-color: @background;
-    border: 0;
-    padding: 2.5ch;
-}
-
-#mainbox {
-    border: 0;
-    padding: 0;
-}
-
-#message {
-    border: 2px 0px 0px;
-    border-color: @border-color;
-    padding: 1px;
-}
-
-#textbox {
-    text-color: @foreground;
-}
-
-#inputbar {
-    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
-}
-
-#textbox-prompt-colon {
-    expand: false;
-    str: ":";
-    margin: 0px 0.3em 0em 0em;
-    text-color: @normal-foreground;
-}
-
-#listview {
-    fixed-height: 0;
-    border: 2px 0px 0px;
-    border-color: @border-color;
-    spacing: 2px;
-    scrollbar: true;
-    padding: 2px 0px 0px;
-}
-
-#element {
-    border: 0;
-    padding: 1px;
-}
-
-#element-text, element-icon {
-    background-color: inherit;
-    text-color:       inherit;
-}
-
-#element.normal.normal {
-    background-color: @normal-background;
-    text-color: @normal-foreground;
-}
-
-#element.normal.urgent {
-    background-color: @urgent-background;
-    text-color: @urgent-foreground;
-}
-
-#element.normal.active {
-    background-color: @active-background;
-    text-color: @active-foreground;
-}
-
-#element.selected.normal {
-    background-color: @selected-normal-background;
-    text-color: @selected-normal-foreground;
-}
-
-#element.selected.urgent {
-    background-color: @selected-urgent-background;
-    text-color: @selected-urgent-foreground;
-}
-
-#element.selected.active {
-    background-color: @selected-active-background;
-    text-color: @selected-active-foreground;
-}
-
-#element.alternate.normal {
-    background-color: @alternate-normal-background;
-    text-color: @alternate-normal-foreground;
-}
-
-#element.alternate.urgent {
-    background-color: @alternate-urgent-background;
-    text-color: @alternate-urgent-foreground;
-}
-
-#element.alternate.active {
-    background-color: @alternate-active-background;
-    text-color: @alternate-active-foreground;
-}
-
-#scrollbar {
-    width: 4px;
-    border: 0;
-    handle-width: 8px;
-    padding: 0;
-}
-
-#sidebar {
-    border: 2px 0px 0px;
-    border-color: @border-color;
-}
-
-#button {
-    text-color: @normal-foreground;
-}
-
-#button.selected {
-    background-color: @selected-normal-background;
-    text-color: @selected-normal-foreground;
-}
-
-#inputbar {
-    spacing: 0;
-    text-color: @normal-foreground;
-    padding: 1px;
-}
-
-#case-indicator {
-    spacing: 0;
-    text-color: @normal-foreground;
-}
-
-#entry {
-    spacing: 0;
-    text-color: @normal-foreground;
-}
-
-#prompt {
-    spacing: 0;
-    text-color: @normal-foreground;
+alternate-normal-background: @background; // NO TOCAR;
 }

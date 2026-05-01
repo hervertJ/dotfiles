@@ -15,7 +15,7 @@ window_padding_width 28
 #window_padding_width 40
 cursor_blink_interval 0
 
-background_opacity 0.8
+background_opacity 0.7
 scrollbar_handle_opacity 0
 scrollbar_track_opacity 0
 scrollbar_track_hover_opacity 0
@@ -28,6 +28,6 @@ sync_to_monitor yes
 cursor_trail 1
 
 # BEGIN_KITTY_THEME
-# Base16-Black-Metal-Gorgoroth
+# Rose-Pine-Moon
 include current-theme.conf
 # END_KITTY_THEME

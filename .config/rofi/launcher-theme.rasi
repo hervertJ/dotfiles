@@ -1,7 +1,7 @@
 @import "launcher.rasi"
 
 listview {
-    lines: 6;
+    lines: 8;
     columns: 1;
     spacing: 6;
     scrollbar: false;

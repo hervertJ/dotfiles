@@ -1,6 +1,6 @@
 {
   "position": "top",
-  "margin-top": 15,
+  "margin-top": 0,
   "modules-left": ["clock", "mpris"],
   "modules-center": ["custom/notification", "hyprland/workspaces", "cpu"],
   "modules-right": ["pulseaudio", "network", "memory", "battery"],

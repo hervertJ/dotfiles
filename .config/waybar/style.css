@@ -30,9 +30,10 @@ tooltip label {
 
 #workspaces {
   background-color: @background;
-  padding: 5px 3px;
+  padding: 5px 5px;
   margin: 0 0 0 12px;
-  border-radius: 18px;
+  border-radius: 0px 0px 18px 18px;
+  /*border-radius: 18px;*/
   border: 0px solid @color8;
   color: @foreground;
 }
@@ -83,7 +84,8 @@ tooltip label {
   background-color: @background;
   padding: 0 15px 0 15px;
   margin: 0 0 0 12px;
-  border-radius: 45px;
+  border-radius: 0px 0px 18px 18px;
+  /*border-radius: 45px;*/
   border: 0px solid @color8;
 }
 

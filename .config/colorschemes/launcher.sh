@@ -3,14 +3,13 @@
 opciones=" Theme\n Wallpapers\n Utilities\n Screenshots\n Fonts"
 #opciones="Theme\nWallpapers\nModes\nUtilities\nFonts"
 
-seleccion=$(echo -e "$opciones" | rofi -dmenu -theme $HOME/.config/rofi/launcher.rasi -p "Appareance")
+seleccion=$(printf "$opciones" | rofi -dmenu -theme $HOME/.config/rofi/launcher.rasi -p "Appareance")
 
 case "$seleccion" in
   " Theme")
     ~/.config/colorschemes/scripts/theme.sh
     ;;
   " Wallpapers")
-    #~/.config/colorschemes/wallpapers.sh
     ~/.config/colorschemes/scripts/wallpapers-theme.sh
     ;;
   " Utilities")
