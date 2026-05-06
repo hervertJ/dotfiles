@@ -1,32 +1,13 @@
 {
   "position": "top",
   "margin-top": 0,
-  "modules-left": ["hyprland/workspaces"],
-  "modules-right": ["battery", "memory", "clock"],
-
-  "battery": {
-    "bat": "BAT0",
-    "interval": 60,
-    "states": {
-      "good": 80,
-      "warning": 30,
-      "critical": 15
-    },
-    "format": "bat: {capacity}%",
-    "max-length": 25,
-  },
-
-  "memory": {
-      "interval": 5,
-      "format": "mem: {}%",
-      "max-length": 10,
-      "on-click": "kitty htop"
-  },
+  "modules-left": ["clock", "mpris"],
+  "modules-center": ["custom/notification", "hyprland/workspaces", "cpu"],
+  "modules-right": ["pulseaudio", "network", "memory", "battery"],
 
   "clock": {
     "interval": 60,
-    //"format": "{:%H:%M}",
-    "format": "{:%a, %b %d - %I:%M %p}",
+    "format": "{:%H:%M}",
     "max-length": 25
   },
 
@@ -111,7 +92,25 @@
     "max-length": 50
   },
 
+  "battery": {
+    "bat": "BAT0",
+    "interval": 60,
+    "states": {
+      "good": 80,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-icons": ["", "", "", "", ""],
+    "max-length": 25,
+  },
 
+  "memory": {
+      "interval": 5,
+      "format": "{}% ",
+      "max-length": 10,
+      "on-click": "kitty htop"
+  },
 
   "custom/notification": {
     "tooltip": true,

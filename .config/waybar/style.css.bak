@@ -15,7 +15,7 @@
 }
 
 window#waybar {
-  background-color: @background;
+  background: transparent;
 }
 
 tooltip {
@@ -82,13 +82,16 @@ tooltip label {
 #battery,
 #memory,
 #custom-notification {
+  background-color: @background;
   padding: 0 15px 0 15px;
-  margin: 0 0 0 0;
+  margin: 0 0 0 12px;
+  border-radius: 0px 0px 18px 18px;
+  /*border-radius: 45px;*/
   border: 0px solid @color8;
 }
 
 #clock {
-  color: @foreground;
+  color: @color3;
 }
 
 #mpris {
@@ -112,9 +115,10 @@ tooltip label {
 }
 
 #memory {
-  color: @color4;
+  color: @color6;
 }
 
 #battery {
-  color: @color4;
+  color: @color9;
+  margin: 0 12px 0 12px;
 }

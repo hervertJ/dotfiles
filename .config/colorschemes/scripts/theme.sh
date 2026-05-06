@@ -19,6 +19,7 @@ else
     # KITTY_NAME="$selection"
     # NVIM_NAME="$selection"
     notify-send "No se encontró el theme.conf"
+    exit 1
 fi
 
 # Wallpaper

@@ -22,6 +22,10 @@ if status is-interactive
     abbr -a gitc 'git commit -m'
     abbr -a lgit 'lazygit'
 
+    # UNI
+    abbr -a drivel4 'zen-browser https://bit.ly/Drive_L4'
+    abbr -a drivecct 'zen-browser https://bit.ly/DriveFIEE-CCT'
+
 end
 
 set -g fish_greeting
