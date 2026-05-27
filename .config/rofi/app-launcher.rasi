@@ -17,29 +17,30 @@ window {
     transparency:                   "real";
     background-color:               @background;
     text-color:                     @foreground;
-	  width:                          50%;
+	width:                          50%;
     location:                       center;
     x-offset:                       0;
     y-offset:                       0;
 
-	  border:                         0px;
-	  border-color:                   @background;
-    border-radius:                  15px;
+	border:                         1px;
+	border-color:                   @color8;
+    border-radius:                  16px;
 }
-
-
-
 
 mainbox {
     children:                       [ inputbar, listview ];
     background-color:               @background;
     spacing:                        2%;
-    padding:                        4% 2% 4% 2%;
+    //padding:                        4% 2% 4% 2%;
+    padding:                        40px;
 
     border:                         0% 0% 0% 0%;
     border-radius:                  0% 0% 0% 0%;
     border-color:                   @background;
 }
+
+
+
 
 inputbar {
     children:                       [ prompt, entry ];
@@ -47,17 +48,18 @@ inputbar {
     text-color:                     @background;
     expand:                         false;
 
-    border:                         0% 0% 0% 0%;
+    //border:                         0% 0% 0% 0%;
+    border:                         1px;
     border-radius:                  10px;
-    border-color:                   @background;
+    border-color:                   @color1;
 }
 
 prompt {
     enabled:                        true;
-	  padding:                        1.15% 0.5% 1% 0.5%;
-	  background-color:               @color1;
-	  text-color:                     @foreground;
-	  font:                           "IosevkaTerm Nerd Font Bold 14";
+	padding:                        1.15% 0% 1% 0.8%;
+	background-color:               @background;
+	text-color:                     @color1;
+	font:                           "IosevkaTerm Nerd Font Bold 14";
 
     border:                         0px;
     border-radius:                  0px;
@@ -66,10 +68,10 @@ prompt {
 
 textbox-prompt-colon {
     padding:                        1% 0% 1% 0%;
-	  background-color:               @background;
-	  text-color:                     @foreground;
-	  expand:                         false;
-	  str:                            " :: ";
+    background-color:               @background;
+	text-color:                     @foreground;
+	expand:                         false;
+	str:                            " :: ";
 }
 
 entry {
@@ -79,8 +81,8 @@ entry {
     expand:                         true;
     horizontal-align:               0;
     placeholder:                    "Search...";
-	  font:                           "IosevkaTerm Nerd Font 14";
-	  padding:                        1.15% 0.5% 1% 0.5%;
+	font:                           "IosevkaTerm Nerd Font 14";
+	padding:                        1.15% 0.5% 1% 0.5%;
     blink:                          true;
 	  //border:                         2px;
     //border-radius:                  0px 10px 10px 0px;
@@ -107,20 +109,24 @@ listview {
 element {
     background-color:               @background;
     text-color:                     @foreground;
+    //background-color:               @color8;
+    //text-color:                     @foreground;
     orientation:                    horizontal;
     border-radius:                  12px;
     padding:                        1% 0.5% 1% 0.75%;
 }
 
 element-icon {
-    background-color:               @background;
+    background-color:               inherit;
+    //background-color:               @color8;
     size:                           30px;
     border:                         0px;
 }
 
 element-text {
-    background-color:               @background;
-    text-color:                     @foreground;
+    background-color:               inherit;
+    //background-color:               @color8;
+    text-color:                     inherit;
     expand:                         true;
     horizontal-align:               0;
     vertical-align:                 0.5;
@@ -128,8 +134,9 @@ element-text {
 }
 
 element selected {
-    background-color:               @background;
-    text-color:                     @background;
+    //background-color:               @background;
+    background-color:               @color8;
+    text-color:                     @color2;
     border:                         0% 0.3% 0% 0.3%;
     border-radius:                  12px;
     border-color:                   @color2;

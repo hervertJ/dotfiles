@@ -3,6 +3,7 @@
   "margin-top": 0,
   "modules-left": ["hyprland/workspaces"],
   "modules-right": ["battery", "memory", "clock"],
+  "modules-center": ["mpris"],
 
   "battery": {
     "bat": "BAT0",
@@ -38,8 +39,8 @@
 
   "mpris": {
   	"format": "{title} <i>by</i> {artist} <i>from</i> {album}",
-  	"format-paused": "<i>{title} by {artist}</i>",
-    "max-length": 40,
+  	"format-paused": "<i>{title} by {artist}</i> <i>{album}</i>",
+    "max-length": 50,
   	//"player-icons": {
   	//	"default": "▶",
   	//	"mpv": "🎵"

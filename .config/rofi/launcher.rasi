@@ -1,9 +1,10 @@
 configuration {
-	font: "IosevkaTerm Nerd Font Propo Bold 16";
-  disable-history: false;
-  fullscreen: false;
+    font: "IosevkaTerm Nerd Font Propo Bold 16";
+    //font: "JetBrainsMono Nerd Font Propo Bold 16";
+    disable-history: false;
+    fullscreen: false;
 	hide-scrollbar: true;
-	sidebar-mode: false;
+    sidebar-mode: false;
 }
 
 @import ".current-colors-rofi.rasi"
@@ -11,8 +12,8 @@ configuration {
 /* === Ventana principal === */
 window {
     width: 30%;
-    border: 2px;
-    border-color: @background;
+    border: 1px;
+    border-color: @color8;
     border-radius: 16px;
     background-color: @background;
     padding: 16px;
@@ -25,6 +26,8 @@ mainbox {
     text-color:                     @foreground;
     spacing: 12px;
 }
+
+
 
 
 
@@ -56,7 +59,7 @@ entry {
     background-color:            @background;
     placeholder: "Search...";
     text-color: @foreground;
-	  font: "IosevkaTerm Nerd Font Propo 14";
+	font: "IosevkaTerm Nerd Font Propo 16";
 }
 
 

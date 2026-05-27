@@ -6,6 +6,7 @@ if status is-interactive
 
     # dotfiles
     alias dots="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+    abbr -a aadots 'sh ~/scripts/git-add-dots.sh'
 
     # eza
     alias ls='eza -1 --icons --group-directories-first'
@@ -25,6 +26,9 @@ if status is-interactive
     # UNI
     abbr -a drivel4 'zen-browser https://bit.ly/Drive_L4'
     abbr -a drivecct 'zen-browser https://bit.ly/DriveFIEE-CCT'
+    #https://drive.google.com/drive/u/1/folders/1MOouTdjsP8Fd89cGfOUy_TGZQeSlwQUk
+
+    #zoomer (zoom in any screen)
 
 end
 
