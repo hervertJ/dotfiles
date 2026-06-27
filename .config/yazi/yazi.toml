@@ -1,14 +1,22 @@
 [opener]
 image = [
-        { run = "zen-browser %s", orphan = true }
+    { run = "zen-browser %s", orphan = true }
 ]
 pdff = [
       #{ run = 'zathura "$@"', desc = "zathura", block = true, for = "unix" },
-       { run = 'zen-browser %s', desc = "zathura", block = true, for = "unix" },
+    { run = 'zen-browser %s', desc = "zathura", block = true, for = "unix" },
+]
+
+edit = [
+	{ run = "/usr/bin/nvim %s", block = true, for = "linux" },
+]
+
+open = [
+	{ run = "xdg-open %s1", desc = "Open" },
 ]
 
 [open]
-rules = [
-        { mime = "image/*", use = "image" },
-        { mime = "application/pdf", use = [ "pdff", "reveal" ] },
+prepend_rules = [
+    { mime = "image/*", use = "image" },
+    { mime = "application/pdf", use = [ "pdff", "reveal" ] },
 ]

@@ -1,7 +1,7 @@
-#font_family IosevkaTerm Nerd Font Mono
-#font_size 18
-font_family JetBrainsMono Nerd Font Mono
-font_size 16
+font_family IosevkaTerm Nerd Font Mono
+font_size 18
+#font_family JetBrainsMono Nerd Font Mono
+#font_size 16
 
 disable_ligatures no
 enable_audio_bell no
@@ -17,7 +17,7 @@ window_padding_width 28
 #window_padding_width 40
 cursor_blink_interval 0
 
-#background_opacity 0.7
+#background_opacity 0.8
 background_opacity 1
 scrollbar_handle_opacity 0
 scrollbar_track_opacity 0
@@ -30,8 +30,17 @@ sync_to_monitor yes
 
 cursor_trail 1
 
+map page_up scroll_page_up
+map page_down scroll_page_down
+
+map ctrl+equal change_font_size all +4.0
+map ctrl+plus change_font_size all +4.0
+map ctrl+minus change_font_size all -4.0
+
+map ctrl+shift+R change_font_size all 0
+
 
 # BEGIN_KITTY_THEME
-# Base16-Catppuccin
+# Base16-Gruvbox-Dark-Hard
 include current-theme.conf
 # END_KITTY_THEME

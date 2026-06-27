@@ -39,7 +39,7 @@
 
   "mpris": {
   	"format": "{title} <i>by</i> {artist} <i>from</i> {album}",
-  	"format-paused": "<i>{title} by {artist}</i> <i>{album}</i>",
+  	"format-paused": "<i>{title} by {artist}</i> from <i>{album}</i>",
     "max-length": 50,
   	//"player-icons": {
   	//	"default": "▶",
@@ -48,7 +48,7 @@
   	//"status-icons": {
   	//	"paused": "⏸"
   	//},
-  	// "ignored-players": ["firefox"]
+  	"ignored-players": ["firefox"]
   },
 
   "hyprland/workspaces": {
