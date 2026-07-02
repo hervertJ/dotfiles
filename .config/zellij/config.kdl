@@ -265,9 +265,12 @@ plugins {
     zjstatus location="file:~/.config/zellij/plugins/zjstatus.wasm" {
         hide_frame_for_single_pane "false"
 
-        format_left  "{mode}#[fg=,bg=,bold] {tabs}"
-        format_center "#[fg=,bg=]{datetime}"
-        format_right "#[fg=,bg=]{command_memo}  #[fg=,bg=]{command_bat}"
+        //format_left  "{mode}#[fg=,bg=,bold] {tabs}"
+        //format_center "#[fg=,bg=]{datetime}"
+        //format_right "#[fg=,bg=]{command_memo}  #[fg=,bg=]{command_bat}"
+        format_left  "{mode}#[fg=,bg=,bold]"
+        format_center "{tabs}"
+
         format_space "#[bg=]"
 
         mode_normal          "#[fg=#89B4FA]NORMAL"

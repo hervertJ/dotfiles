@@ -9,4 +9,5 @@
                                                               ~/.config/zellij \
                                                               ~/.config/starship.toml \
                                                               ~/scripts \
+                                                              ~/.config/tmux \
                                                               #~/Pictures/Wallpapers

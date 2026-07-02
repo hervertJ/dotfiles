@@ -28,6 +28,14 @@ if status is-interactive
     # zellij layouts
     abbr -a zellij-rust 'zellij --layout ~/.config/zellij/layouts/rust.kdl'
 
+    # fzf
+    #set -gx FZF_DEFAULT_OPTS "--height 100% --layout reverse --style=minimal --no-bold --info hidden --pointer '  ' --prompt '> ' --color 'current-bg:8,current-fg:-1,prompt:1'"
+    #set -gx FZF_DEFAULT_OPTS ""
+
+    abbr -a pdf 'sh ~/scripts/open-pdf.sh'
+    abbr -a launch 'sh ~/scripts/fzf-scripts.sh'
+    abbr -a ty 'sh ~/scripts/fzf-typst.sh'
+
 end
 
 set -g fish_greeting

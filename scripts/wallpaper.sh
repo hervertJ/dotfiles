@@ -19,6 +19,6 @@ if [ -z "$SELECTED" ]; then
 fi
 
 awww img "$DIR_WALL/$SELECTED" --transition-type center --transition-fps 60 --transition-step 255
-awww img "$DIR_WALL/penger/$SELECTED" --transition-type center --transition-fps 60 --transition-step 255
+#awww img "$DIR_WALL/penger/$SELECTED" --transition-type center --transition-fps 60 --transition-step 255
 
 ln -sfn "../../Pictures/Wallpapers/$SELECTED" ~/.config/colorschemes/.current-wallpaper
