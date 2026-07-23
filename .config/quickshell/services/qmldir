@@ -1,0 +1,3 @@
+singleton Services 1.0 Services.qml
+CpuService 1.0 CpuService.qml
+MemoryService 1.0 MemoryService.qml
