@@ -17,44 +17,35 @@ local wallpaper   = "pkill rofi || sh ~/scripts/wallpaper.sh"
 
 local mainMod = "ALT" -- Sets "Windows" key as main modifier
 
--- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
-hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(menu))
+--hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(menu))
+hl.bind(mainMod .. " + SPACE", hl.dsp.global("quickshell:toggle-launcher"))
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
-local closeWindowBind = hl.bind(mainMod .. " + C", hl.dsp.window.close())
+local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
 -- hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
-hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("kitty -e yazi"))
-hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
+hl.bind("SUPER + V", hl.dsp.window.float({ action = "toggle" }))
+hl.bind("SUPER + F", hl.dsp.window.fullscreen())
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(dmenu))
---hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 --hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
-
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("sh ~/scripts/fastprobe.sh"))
 
--- My Apps
-hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(browser))
-
 -- Move focus with mainMod + arrow keys
---hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
---hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
---hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }))
---hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
-hl.bind(mainMod .. " + CTRL + h", hl.dsp.focus({ direction = "left" }))
-hl.bind(mainMod .. " + CTRL + l", hl.dsp.focus({ direction = "right" }))
-hl.bind(mainMod .. " + CTRL + k", hl.dsp.focus({ direction = "up" }))
-hl.bind(mainMod .. " + CTRL + j", hl.dsp.focus({ direction = "down" }))
+hl.bind("SUPER + h", hl.dsp.focus({ direction = "left" }))
+hl.bind("SUPER + l", hl.dsp.focus({ direction = "right" }))
+hl.bind("SUPER + k", hl.dsp.focus({ direction = "up" }))
+hl.bind("SUPER + j", hl.dsp.focus({ direction = "down" }))
 
 -- Switch workspaces with mainMod + [0-9]
--- Move active window to a workspace with mainMod + SHIFT + [0-9]
 for i = 1, 10 do
     local key = i % 10 -- 10 maps to key 0
-    hl.bind(mainMod .. " + " .. key,             hl.dsp.focus({ workspace = i}))
-    hl.bind(mainMod .. " + SHIFT + " .. key,     hl.dsp.window.move({ workspace = i }))
+    hl.bind("SUPER + " .. key,             hl.dsp.focus({ workspace = i}))
+    hl.bind("SUPER + SHIFT + " .. key,     hl.dsp.window.move({ workspace = i }))
 end
 
 -- Example special workspace (scratchpad)
 hl.bind(mainMod .. " + S",         hl.dsp.workspace.toggle_special("magic"))
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
+hl.bind("SUPER + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
 
 -- Scroll through existing workspaces with mainMod + scroll
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
@@ -89,31 +80,20 @@ hl.bind("XF86AudioNext",  hl.dsp.exec_cmd("playerctl next"),       { locked = tr
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
-hl.bind(mainMod .. " + CTRL + SPACE",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
+--hl.bind(mainMod .. " + CTRL + SPACE",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
 
 -- Groups
---bind = $mainMod, G, togglegroup # Agrupar / Desagrupar la ventana actual
---bind = ALT, tab, changegroupactive, f    # 'f' de forward (adelante)
---bind = ALT SHIFT, tab, changegroupactive, b  # 'b' de backward (atrás)
---bind = $mainMod SHIFT, G, moveoutofgroup
---
--- Notification
---bind = ALT, P, exec, swaync-client -t
---
--- Cipboard
---bind = ALT, V, exec, cliphist list | rofi -dmenu -display-columns 2 -p "Clipboard" -theme /home/hervert/.config/rofi/launcher.rasi | cliphist decode | wl-copy
+hl.bind(mainMod .. "+ G",           hl.dsp.group.toggle())
+hl.bind(mainMod .. "+ Tab",         hl.dsp.group.next())
+hl.bind(mainMod .. "+ SHIFT + Tab", hl.dsp.group.prev())
+hl.bind(mainMod .. "+ SHIFT + G",    hl.dsp.group.lock())
 
+-- Cipboard
+hl.bind(mainMod .. "+ V", hl.dsp.exec_cmd([[cliphist list | rofi -dmenu -display-columns 2 -p "Clipboard" -theme /home/hervert/.config/rofi/launcher.rasi | cliphist decode | wl-copy]]))
 
 -- Screenshot
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m region --clipboard-only"))
---bind = $mainMod SHIFT, S, exec, grim -g "$(slurp)" - | swappy -f -
---ind = $mainMod SHIFT, S, exec, hyprshot -m region --clipboard-only
---bind = $mainMod SHIFT, S, exec, hyprshot -m region -o ~/Pictures/Screenshots
+hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd([[grim -g "$(slurp -c '##ff0000ff')" -t ppm - | satty --filename - --output-filename ~/Pictures/Screenshots/satty-$(date '+\%Y\%m\%d-\%H:\%M:\%S').png]]))
 
--- Zoomer wayland
-hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("grim - | wayland-boomer"))
-
--- Sowon
-hl.bind(mainMod .. " + J", hl.dsp.exec_cmd(sowon))
-
--- bind = $mainMod SHIFT, S, exec, hyprshot -m region --clipboard-only
+-- Hyprlock
+hl.bind("SUPER + SHIFT + L", hl.dsp.exec_cmd("hyprlock"))

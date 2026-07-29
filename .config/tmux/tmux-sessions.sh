@@ -4,6 +4,7 @@ DIRS=(
     "$HOME"
     "$HOME/privrepo"
     "$HOME/privrepo/UNI"
+    "$HOME/privrepo/Atlas/IA"
     "$HOME/pruebas"
     "$HOME/pruebas/bash"
     "$HOME/pruebas/C"
@@ -13,8 +14,6 @@ DIRS=(
     "$HOME/pruebas/typst"
     "$HOME/scripts"
 )
-
-    #selected=$(find "${DIRS[@]}" -mindepth 1 -maxdepth 1 -type d \
 
 if [[ $# -eq 1 ]]; then
     selected=$1

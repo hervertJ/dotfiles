@@ -11,7 +11,7 @@ fi
 
 sel=$(
     fd --type f --extension typ | sort |
-    fzf --height 100% --layout reverse --style=minimal --no-bold --info hidden --pointer "> " --prompt "PDFs> " --color "current-bg:8,current-fg:-1,prompt:1,pointer:-1"
+    fzf --height 100% --layout reverse --style=minimal --no-bold --info hidden --pointer "> " --prompt "Typts> " --color "current-bg:8,current-fg:-1,prompt:1,pointer:-1"
 ) || exit
 
 nvim +TypstPreview "$sel"

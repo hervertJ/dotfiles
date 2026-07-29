@@ -24,4 +24,4 @@ hl.env("QT_WAYLAND_DISABLE_WINDOWDECORATION", "1")
 hl.env("QT_QPA_PLATFORMTHEME", "qt5ct")
 
 -- Screenshots
-hl.env("HYPRSHOT_DIR, /home/hervert/Pictures/Screenshots")
+hl.env("HYPRSHOT_DIR", "/home/hervert/Pictures/Screenshots")

@@ -12,8 +12,9 @@ if status is-interactive
     # alias ls='eza -1 --icons --group-directories-first'
     alias ls='eza --icons --group-directories-first'
     alias ll='eza -lbF --git --icons'
-    alias ll='eza -lbF --git'
-    alias la='eza -lbhHigUmuSa --time-style=long-iso --git --icons'
+    #alias ll='eza -lbF --git'
+    #alias la='eza -lbhHigUmuSa --time-style=long-iso --git --icons'
+    alias la='eza -lba --time-style=long-iso --git --icons'
     alias lt='eza --tree --icons'
 
     # git
@@ -28,14 +29,18 @@ if status is-interactive
     # zellij layouts
     abbr -a zellij-rust 'zellij --layout ~/.config/zellij/layouts/rust.kdl'
 
+    abbr -a tmux 'tmux new -s hervert'
+
     # fzf
     #set -gx FZF_DEFAULT_OPTS "--height 100% --layout reverse --style=minimal --no-bold --info hidden --pointer '  ' --prompt '> ' --color 'current-bg:8,current-fg:-1,prompt:1'"
     #set -gx FZF_DEFAULT_OPTS ""
 
     abbr -a pdf 'sh ~/scripts/open-pdf.sh'
-    abbr -a launch 'sh ~/scripts/fzf-scripts.sh'
     abbr -a ty 'sh ~/scripts/fzf-typst.sh'
-
 end
 
+
 set -g fish_greeting
+
+# opencode
+fish_add_path /home/hervert/.opencode/bin

@@ -20,3 +20,4 @@ require("modules.input")
 require("modules.binds")
 
 require("modules.windows-workspaces")
+require("modules.group")
