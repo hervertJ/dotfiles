@@ -3,7 +3,7 @@
 ---------------------
 
 -- Set programs that you use
-local terminal    = "kitty"
+local terminal    = "ghostty"
 local browser     = "zen-browser"
 local fileManager = "nautilus"
 
@@ -83,9 +83,9 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 --hl.bind(mainMod .. " + CTRL + SPACE",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
 
 -- Groups
-hl.bind(mainMod .. "+ G",           hl.dsp.group.toggle())
-hl.bind(mainMod .. "+ Tab",         hl.dsp.group.next())
-hl.bind(mainMod .. "+ SHIFT + Tab", hl.dsp.group.prev())
+hl.bind(mainMod .. "+ G",            hl.dsp.group.toggle())
+hl.bind(mainMod .. "+ Tab",          hl.dsp.group.next())
+hl.bind(mainMod .. "+ SHIFT + Tab",  hl.dsp.group.prev())
 hl.bind(mainMod .. "+ SHIFT + G",    hl.dsp.group.lock())
 
 -- Cipboard

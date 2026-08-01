@@ -1,11 +1,11 @@
 #!/bin/bash
 
-NAME=$(sed -n '1p' $HOME/.config/kitty/current-theme.conf)
-ACTUAL_THEME="${NAME:1}"
-echo "$ACTUAL_THEME"
+#NAME=$(sed -n '1p' $HOME/.config/kitty/current-theme.conf)
+#ACTUAL_THEME="${NAME:1}"
+#echo "$ACTUAL_THEME"
 
 # Rutas
-DIR_WALL="$HOME/Pictures/Wallpapers"
+DIR_WALL="$HOME/Pictures/Wallpapers/"
 
 echo "$DIR_WALL"
 

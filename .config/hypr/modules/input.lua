@@ -5,10 +5,11 @@
 hl.config({
   input = {
     kb_layout  = "us, us",
-    -- kb_variant = "intl",
-    kb_variant = "altgr-intl, intl",
+    kb_variant = "intl",
+    --kb_variant = "altgr-intl, intl",
     kb_model   = "",
     kb_options = "ctrl:nocaps, grp:alt_caps_toggle",
+
     kb_rules   = "",
 
     repeat_rate = 40,   -- Cantidad de repeticiones por segundo

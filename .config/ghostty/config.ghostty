@@ -1,0 +1,13 @@
+theme = Gruvbox Dark
+
+font-family = iA Writer Mono S
+font-style = italic
+font-size = 18
+
+confirm-close-surface=false
+
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
+
+custom-shader = ./cursor_warp.glsl

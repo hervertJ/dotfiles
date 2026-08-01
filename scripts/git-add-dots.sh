@@ -10,4 +10,5 @@
                                                               ~/.config/starship.toml \
                                                               ~/scripts \
                                                               ~/.config/tmux \
+                                                              ~/.config/ghostty \
                                                               #~/Pictures/Wallpapers
