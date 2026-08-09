@@ -11,4 +11,5 @@
                                                               ~/scripts \
                                                               ~/.config/tmux \
                                                               ~/.config/ghostty \
-                                                              #~/Pictures/Wallpapers
+                                                              ~/.config/quickshell \
+                                                              ~/Pictures/Wallpapers

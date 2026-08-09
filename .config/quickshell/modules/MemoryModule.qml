@@ -9,7 +9,7 @@ Item {
   Text {
     id: memoryText
     text: "mem: " + Services.memory.memUsage + "%"
-    color: Theme.color4
+    color: Theme.blue2
 
     font {
       family: Theme.fontFamily

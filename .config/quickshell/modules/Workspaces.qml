@@ -15,7 +15,7 @@ RowLayout {
       property bool isActive: Hyprland.focusedWorkspace?.id === (index + 1)
 
       text: index + 1
-      color: isActive ? Theme.color2 : (ws ? Theme.background_alt_2 : Theme.background_alt_2)
+      color: isActive ? Theme.green2 : (ws ? Theme.bg4 : Theme.bg4)
 
       font {
         family: Theme.fontFamily

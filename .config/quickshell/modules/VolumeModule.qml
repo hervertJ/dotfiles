@@ -18,7 +18,7 @@ Item {
   Text {
     id: volumeText
     text: root.muted ? "mute" : "vol: " + root.level + "%"
-    color: Theme.color3
+    color: Theme.yellow2
     font {
       family: Theme.fontFamily
       pixelSize: Theme.fontSize

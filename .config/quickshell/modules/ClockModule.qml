@@ -3,7 +3,7 @@ import QtQuick
 import "../theme"
 
 Text {
-  color: Theme.color1
+  color: Theme.red1
   text: Qt.formatDateTime(clock.date, "ddd, MMM dd - HH:mm")
 
   font {

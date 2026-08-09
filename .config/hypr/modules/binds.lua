@@ -23,18 +23,30 @@ hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
 local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
 -- hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
-hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
+--hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind("SUPER + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind("SUPER + F", hl.dsp.window.fullscreen())
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(dmenu))
 --hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("sh ~/scripts/fastprobe.sh"))
+--hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("sh ~/scripts/fastprobe.sh"))
 
 -- Move focus with mainMod + arrow keys
 hl.bind("SUPER + h", hl.dsp.focus({ direction = "left" }))
 hl.bind("SUPER + l", hl.dsp.focus({ direction = "right" }))
 hl.bind("SUPER + k", hl.dsp.focus({ direction = "up" }))
 hl.bind("SUPER + j", hl.dsp.focus({ direction = "down" }))
+
+-- Mover la ventana activa
+hl.bind("SUPER + SHIFT + H", hl.dsp.window.swap({ direction = "left" }))
+hl.bind("SUPER + SHIFT + L", hl.dsp.window.swap({ direction = "right" }))
+hl.bind("SUPER + SHIFT + K", hl.dsp.window.swap({ direction = "up" }))
+hl.bind("SUPER + SHIFT + J", hl.dsp.window.swap({ direction = "down" }))
+
+-- Resize active window
+hl.bind(mainMod .. " + SUPER + H", hl.dsp.window.resize({ x = -200, y = 0, relative = true }))
+hl.bind(mainMod .. " + SUPER + L", hl.dsp.window.resize({ x = 200, y = 0, relative = true }))
+hl.bind(mainMod .. " + SUPER + K", hl.dsp.window.resize({ x = 0, y = -20, relative = true }))
+hl.bind(mainMod .. " + SUPER + J", hl.dsp.window.resize({ x = 0, y = 20, relative = true }))
 
 -- Switch workspaces with mainMod + [0-9]
 for i = 1, 10 do
@@ -60,12 +72,6 @@ hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 --bind = $mainMod SUPER, h, resizeactive, -210 0
 --bind = $mainMod SUPER, k, resizeactive, 0 -210
 --bind = $mainMod SUPER, j, resizeactive, 0 210
---
---# Move window
---bind = CTRL SUPER, H, swapwindow, l
---bind = CTRL SUPER, L, swapwindow, r
---bind = CTRL SUPER, K, swapwindow, u
---bind = CTRL SUPER, J, swapwindow, d
 
 -- Laptop multimedia keys for volume and LCD brightness
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })
@@ -96,4 +102,4 @@ hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m region --clipboa
 hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd([[grim -g "$(slurp -c '##ff0000ff')" -t ppm - | satty --filename - --output-filename ~/Pictures/Screenshots/satty-$(date '+\%Y\%m\%d-\%H:\%M:\%S').png]]))
 
 -- Hyprlock
-hl.bind("SUPER + SHIFT + L", hl.dsp.exec_cmd("hyprlock"))
+hl.bind(mainMod .." + SHIFT + L", hl.dsp.exec_cmd("hyprlock"))

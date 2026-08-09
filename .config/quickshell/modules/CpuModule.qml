@@ -9,7 +9,7 @@ Item {
   Text {
     id: cpuText
     text: "cpu: " + Services.cpu.cpuUsage + "%"
-    color: Theme.color5
+    color: Theme.purple2
 
     font {
       family: Theme.fontFamily

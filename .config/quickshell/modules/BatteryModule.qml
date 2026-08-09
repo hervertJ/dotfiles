@@ -8,13 +8,13 @@ Item {
   implicitHeight: batteryText.implicitHeight
 
   property var battery: UPower.displayDevice
-  property bool charging: battery.state === UPowerDeviceState.Charging
+  //property bool charging: battery.state === UPowerDeviceState.Charging
   readonly property int level: Math.round(battery.percentage * 100)
 
   Text {
     id: batteryText
     text: "bat: " + root.level + "%"
-    color: Theme.color2
+    color: Theme.green2
 
     font {
       family: Theme.fontFamily

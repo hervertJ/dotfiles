@@ -14,7 +14,7 @@ Variants {
     id: root
     anchors { top: true; left: true; right: true }
     implicitHeight: 40
-    color: Theme.background
+    color: Theme.bg0_h
 
     RowLayout {
       anchors.leftMargin: 20

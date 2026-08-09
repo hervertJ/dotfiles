@@ -16,7 +16,7 @@ Window {
   y: (Screen.height - height) / 2
 
   flags: Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint
-  color: Theme.background
+  color: Theme.bg0_h
   visible: false
 
   GlobalShortcut {
@@ -57,14 +57,14 @@ Window {
     Rectangle {
       Layout.fillWidth: true
       height: 48
-      color: Theme.background_alt_1
+      color: Theme.bg1
       radius: 10
 
       TextInput {
         id: searchField
         anchors.fill: parent
         anchors.margins: 12
-        color: Theme.foreground
+        color: Theme.fg
         font { family: Theme.fontFamily; pixelSize: Theme.fontSize - 2; weight: Theme.weight }
         focus: true
         Keys.onPressed: event => {
@@ -114,7 +114,7 @@ Window {
       Text {
         anchors.fill: parent
         anchors.margins: 12
-        color: Theme.background_alt_2
+        color: Theme.gray2
         // opacity: 0.4
         font { family: Theme.fontFamily; pixelSize: Theme.fontSize - 2; weight: Theme.weight }
         text: "Search Apps..."
@@ -139,8 +139,8 @@ Window {
         width: appListView.width
         height: 44
         color: appListView.currentIndex === index
-          ? Theme.color2
-          : mouseArea.containsMouse ? Theme.background_alt_2 : "transparent"
+          ? Theme.green2
+          : mouseArea.containsMouse ? Theme.bg0_h: "transparent"
         radius: 8
 
         function clicked() {
@@ -149,8 +149,8 @@ Window {
 
         Text {
           text: modelData.name
-          color: appListView.currentIndex === index ? Theme.background : Theme.foreground
-          font { family: Theme.fontFamily; pixelSize: 14; weight: Theme.weight }
+          color: appListView.currentIndex === index ? Theme.bg0_h : Theme.fg
+          font { family: Theme.fontFamily; pixelSize: Theme.fontSize - 4; weight: Theme.weight }
           anchors.verticalCenter: parent.verticalCenter
           anchors.left: parent.left
           anchors.leftMargin: 12

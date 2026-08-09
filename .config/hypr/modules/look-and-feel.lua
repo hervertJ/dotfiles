@@ -43,7 +43,7 @@ hl.config({
       enabled        = true,
       size           = 10,
       passes         = 3,
-      ignore_opacity = true,
+      ignore_opacity = false,
 
       noise = 0.00,
       contrast = 1,

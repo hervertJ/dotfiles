@@ -16,8 +16,6 @@ require("modules.permissions")
 require("modules.look-and-feel")
 require("modules.misc")
 require("modules.input")
-
 require("modules.binds")
-
 require("modules.windows-workspaces")
 require("modules.group")

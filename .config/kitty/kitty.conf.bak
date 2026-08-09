@@ -19,7 +19,7 @@ inital_window_height 23c
 window_padding_width 0
 cursor_blink_interval 0
 
-background_opacity 1
+background_opacity 0.9
 scrollbar_handle_opacity 0
 scrollbar_track_opacity 0
 scrollbar_track_hover_opacity 0
@@ -46,6 +46,6 @@ map alt+p send_text all ~/scripts/fzf-open-pdf.sh\r
 map alt+t send_text all ~/scripts/fzf-typst.sh\r
 
 # BEGIN_KITTY_THEME
-# Base16-Gruvbox-Dark-Hard
+# Base16-Black-Metal-Gorgoroth
 include current-theme.conf
 # END_KITTY_THEME

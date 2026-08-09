@@ -9,13 +9,15 @@ if status is-interactive
     abbr -a aadots 'sh ~/scripts/git-add-dots.sh'
 
     # eza
-    # alias ls='eza -1 --icons --group-directories-first'
+    #alias ls='eza -1 --icons --group-directories-first'
+ 
     alias ls='eza --icons --group-directories-first'
     alias ll='eza -lbF --git --icons'
+    alias la='eza -lba --time-style=long-iso --git --icons'
+    #alias lt='eza --tree --icons'
+
     #alias ll='eza -lbF --git'
     #alias la='eza -lbhHigUmuSa --time-style=long-iso --git --icons'
-    alias la='eza -lba --time-style=long-iso --git --icons'
-    alias lt='eza --tree --icons'
 
     # git
     abbr -a gitc 'git commit -m'
@@ -29,7 +31,7 @@ if status is-interactive
     # zellij layouts
     abbr -a zellij-rust 'zellij --layout ~/.config/zellij/layouts/rust.kdl'
 
-    abbr -a tmux 'tmux new -s hervert'
+    abbr -a tmuxx 'tmux new -s hervert'
 
     # fzf
     #set -gx FZF_DEFAULT_OPTS "--height 100% --layout reverse --style=minimal --no-bold --info hidden --pointer '  ' --prompt '> ' --color 'current-bg:8,current-fg:-1,prompt:1'"
@@ -37,6 +39,9 @@ if status is-interactive
 
     abbr -a pdf 'sh ~/scripts/open-pdf.sh'
     abbr -a ty 'sh ~/scripts/fzf-typst.sh'
+
+    # fish
+    abbr -a ff 'fastfetch'
 end
 
 
